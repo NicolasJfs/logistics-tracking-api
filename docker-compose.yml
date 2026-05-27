@@ -1,0 +1,24 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: logistics-postgres
+
+    environment:
+      POSTGRES_DB: logisticsdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+
+    container_name: logistics-api
+
+    ports:
+      - "9090:9090"
+
+    depends_on:
+      - postgres
