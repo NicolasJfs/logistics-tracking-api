@@ -2,10 +2,10 @@ FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-COPY target/logistics-tracking-api-0.0.1-SNAPSHOT.jar app.jar
+COPY . .
+
+RUN ./mvnw clean package -DskipTests
 
 EXPOSE 9090
 
-LABEL authors="Nicolas.Fernandez"
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "target/logistics-tracking-api-0.0.1-SNAPSHOT.jar"]
