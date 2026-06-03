@@ -2,7 +2,6 @@ package com.nicolasfernandez.logisticstrackingapi.controller;
 
 import com.nicolasfernandez.logisticstrackingapi.dto.ShipmentRequest;
 import com.nicolasfernandez.logisticstrackingapi.dto.ShipmentResponse;
-import com.nicolasfernandez.logisticstrackingapi.entity.Shipment;
 import com.nicolasfernandez.logisticstrackingapi.service.ShipmentService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
